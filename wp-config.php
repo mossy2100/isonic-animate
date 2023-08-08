@@ -60,7 +60,14 @@ define( 'DB_PASSWORD', 'mzqcLs!.F^1_' );
 
 /** Database hostname */
 
-define( 'DB_HOST', 'localhost' );
+if ( $_SERVER['HTTP_HOST'] == 'localhost:8001' ) {
+	define( 'DB_HOST', 'db' );
+	define( 'FORCE_SSL_ADMIN', false );
+}
+else {
+	define( 'DB_HOST', 'localhost' );
+}
+
 
 
 

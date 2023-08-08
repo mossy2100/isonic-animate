@@ -1,35 +1,21 @@
 <?php
-
 /**
-
  * The base configuration for WordPress
-
  * The wp-config.php creation script uses this file during the installation.
-
  * You don't have to use the web site, you can copy this file to "wp-config.php"
-
  * and fill in the values.
-
  *
-
  * This file contains the following configurations:
-
  *
-
  * * Database settings
-
  * * Secret keys
-
  * * Database table prefix
-
  * * ABSPATH
  *
  * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
-
-
 
 // ** Database settings - You can get this info from your web host ** //
 
@@ -51,8 +37,11 @@ define( 'DB_PASSWORD', 'mzqcLs!.F^1_' );
 
 
 
-/** Database hostname */
-
+/**
+ * Database hostname
+ *
+ * Varies for local development vs. cPanel/production.
+ */
 if ( $_SERVER['HTTP_HOST'] == 'localhost:8001' ) {
 	define( 'DB_HOST', 'db' );
 	define( 'FORCE_SSL_ADMIN', false );

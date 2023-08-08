@@ -1,7 +1,8 @@
 <?php
 /**
- * Plugin Name: Custom Login Page
+ * Plugin Name: iSonic Custom Login Page
  */
+
 get_header();
 
 echo 'custom login page plugin - testing page load';
@@ -9,7 +10,7 @@ echo 'custom login page plugin - testing page load';
 if ( ! is_user_logged_in() ) {
 	$args = array(
 		'redirect'       => admin_url(), // redirect to admin dashboard.
-		'form_id'        => 'custom_loginform',
+		'form_id'        => 'isonic_custom_login_form',
 		'label_username' => __( 'Username:' ),
 		'label_password' => __( 'Password:' ),
 		'label_remember' => __( 'Remember Me' ),
